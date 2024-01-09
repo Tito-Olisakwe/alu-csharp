@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Script to initialize a new C# project
 
 # Create a new directory for the project
