@@ -3,9 +3,10 @@ using System;
 class Character
 {
     public static bool IsLower(char c)
-    {
-        return c >= 'a' && c <= 'z';
-    }
+{
+    return c >= 'a' && c <= 'z';
+}
+
 }
 
 class Program
