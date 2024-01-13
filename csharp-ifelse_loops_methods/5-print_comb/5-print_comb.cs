@@ -1,21 +1,24 @@
 using System;
+using System.Text;
 
 class Program
 {
     static void Main(string[] args)
     {
+        StringBuilder numbers = new StringBuilder();
+
         for (int i = 0; i < 100; i++)
         {
-            // Format each number as two digits
-            Console.Write($"{i:D2}");
+            numbers.Append(i.ToString("D2"));
 
-            // Add a comma and space except after the last number
             if (i < 99)
             {
-                Console.Write(", ");
+                numbers.Append(", ");
             }
         }
-        // Add a new line after the loop
-        Console.WriteLine();
+
+        // Print the entire string
+        Console.Write(numbers);
+        Console.WriteLine(); // To add the final new line
     }
 }
