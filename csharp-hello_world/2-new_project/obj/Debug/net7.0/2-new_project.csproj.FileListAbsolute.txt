@@ -1,0 +1,15 @@
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/bin/Debug/net7.0/2-new_project
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/bin/Debug/net7.0/2-new_project.deps.json
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/bin/Debug/net7.0/2-new_project.runtimeconfig.json
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/bin/Debug/net7.0/2-new_project.dll
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/bin/Debug/net7.0/2-new_project.pdb
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/2-new_project.csproj.AssemblyReference.cache
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/2-new_project.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/2-new_project.AssemblyInfoInputs.cache
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/2-new_project.AssemblyInfo.cs
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/2-new_project.csproj.CoreCompileInputs.cache
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/2-new_project.dll
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/refint/2-new_project.dll
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/2-new_project.pdb
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/2-new_project.genruntimeconfig.cache
+/workspaces/alu-csharp/csharp-hello_world/2-new_project/obj/Debug/net7.0/ref/2-new_project.dll
