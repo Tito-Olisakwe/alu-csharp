@@ -1,0 +1,28 @@
+using System;
+
+public class Array
+{
+    public static int?[] CreatePrint(int size)
+    {
+        if (size < 0)
+        {
+            Console.WriteLine("Size cannot be negative");
+            return null;
+        }
+
+        int?[] newArray = new int?[size];
+
+        for (int i = 0; i < size; i++)
+        {
+            newArray[i] = i;
+            Console.Write(i + (i < size - 1 ? " " : "\n"));
+        }
+
+        if (size == 0)
+        {
+            Console.WriteLine();
+        }
+
+        return newArray;
+    }
+}
