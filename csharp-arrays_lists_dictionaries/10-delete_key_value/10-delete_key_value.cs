@@ -5,12 +5,13 @@ public class Dictionary
 {
     public static Dictionary<string, string> DeleteKeyValue(Dictionary<string, string> myDict, string key)
     {
-        // Create a new dictionary to hold the updated values
-        Dictionary<string, string> updatedDict = new Dictionary<string, string>(myDict);
+        // Check if the dictionary contains the key and remove it
+        if (myDict.ContainsKey(key))
+        {
+            myDict.Remove(key);
+        }
 
-        // Remove the key if it exists
-        updatedDict.Remove(key);
-
-        return updatedDict;
+        // Return the original dictionary
+        return myDict;
     }
 }
