@@ -1,13 +1,28 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 
-public class Array
+class MyStack
 {
-    public static void Reverse(int[] array)
+    public static Stack<string> Info(Stack<string> aStack, string newItem, string search)
     {
-        // No null checks; proceed directly to processing the array
-        for (int i = array.Length - 1; i >= 0; i--)
+        string item = "";
+
+        Console.WriteLine("Number of items: {0}", aStack.Count);
+        if (aStack.Count == 0)
         {
-            Console.Write(array[i] + (i > 0 ? " " : "\n"));
+            item = "Stack is empty";
         }
+        else
+        {
+            item = "Top item: " + aStack.Peek();
+        }
+        Console.WriteLine(item);
+        Console.WriteLine("Stack contains \"{0}\": {1}", search, aStack.Contains(search));
+        while (aStack.Contains(search))
+        {
+            aStack.Pop();
+        }
+        aStack.Push(newItem);
+        return aStack;
     }
 }
