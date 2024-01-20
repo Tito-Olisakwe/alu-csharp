@@ -1,20 +1,18 @@
-﻿using System;
-using System.Text;
+using System;
 
-class Array
+public class Array
 {
     public static void Reverse(int[] array)
     {
-        var output = new StringBuilder();
-        if (array != null)
+        if (array == null || array.Length == 0)
         {
-            for (int i = array.Length - 1; i >= 0; i--)
-            {
-                output.Append(array[i]);
-                if (i != 0)
-                    output.Append(" ");
-            }
+            Console.WriteLine();
+            return;
         }
-        Console.WriteLine(output);
+
+        for (int i = array.Length - 1; i >= 0; i--)
+        {
+            Console.Write(array[i] + (i > 0 ? " " : "\n"));
+        }
     }
 }
