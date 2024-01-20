@@ -11,6 +11,12 @@ public class List
             return null;
         }
 
+        if (size == 0)
+        {
+            Console.WriteLine(); // Print a newline for a size of 0
+            return new List<int>();
+        }
+
         List<int> newList = new List<int>();
 
         for (int i = 0; i < size; i++)
