@@ -4,7 +4,7 @@ public class Array
 {
     public static void Reverse(int[] array)
     {
-        // Removed the null check to allow the compiler to trigger the warning
+        // No null check. Directly accessing array.Length will trigger a warning if array is null
         if (array.Length == 0)
         {
             Console.WriteLine();
