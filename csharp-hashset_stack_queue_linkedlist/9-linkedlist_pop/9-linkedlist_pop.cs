@@ -6,7 +6,7 @@ public class LList
     public static int Pop(LinkedList<int> myLList)
     {
         // Check if the LinkedList is empty
-        if (myLList == null || myLList.Count == 0)
+        if (myLList == null || myLList.First == null)
         {
             return 0;
         }
