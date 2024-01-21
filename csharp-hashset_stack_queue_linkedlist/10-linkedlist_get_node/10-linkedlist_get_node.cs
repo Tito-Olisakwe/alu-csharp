@@ -33,7 +33,7 @@ public class LList
     }
 }
 
-class Program
+class TestProgram  // Renamed from 'Program' to 'TestProgram'
 {
     static void Main()
     {
