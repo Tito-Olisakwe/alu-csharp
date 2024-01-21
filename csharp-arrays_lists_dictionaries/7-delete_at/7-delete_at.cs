@@ -8,16 +8,25 @@ public class List
         if (index < 0 || index >= myList.Count)
         {
             Console.WriteLine("Index is out of range");
-            return myList;
+            return myList; // Return the original list unchanged
         }
 
-        for (int i = index; i < myList.Count - 1; i++)
+        List<int> updatedList = new List<int>();
+
+        for (int i = 0; i < myList.Count; i++)
         {
-            myList[i] = myList[i + 1];
+            if (i != index)
+            {
+                updatedList.Add(myList[i]);
+            }
         }
 
-        myList.RemoveAt(myList.Count - 1); // Removing the last element
+        myList.Clear(); // Clear the original list
+        foreach (var item in updatedList)
+        {
+            myList.Add(item); // Add back the items from updatedList to the original list
+        }
 
-        return myList;
+        return myList; // Return the original list, now modified
     }
 }
