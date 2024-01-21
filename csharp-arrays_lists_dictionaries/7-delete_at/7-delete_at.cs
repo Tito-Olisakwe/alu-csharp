@@ -11,15 +11,13 @@ public class List
             return myList;
         }
 
-        List<int> updatedList = new List<int>();
-        for (int i = 0; i < myList.Count; i++)
+        for (int i = index; i < myList.Count - 1; i++)
         {
-            if (i != index)
-            {
-                updatedList.Add(myList[i]);
-            }
+            myList[i] = myList[i + 1];
         }
 
-        return updatedList;
+        myList.RemoveAt(myList.Count - 1); // Removing the last element
+
+        return myList;
     }
 }
