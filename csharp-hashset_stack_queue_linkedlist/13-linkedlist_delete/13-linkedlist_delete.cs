@@ -1,17 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
-class LList{
+class LList
+{
     public static void Delete(LinkedList<int> myLList, int index){
-        int count = 0;
-        LinkedListNode<int> current;
-        current = myLList.First;
-
-        while(current != null){
-            if(count == index){
-                myLList.Remove(current);
+        foreach(var elem in myLList){
+            if (index == 0){
+                myLList.Remove(elem);
+                break;
             }
-            current = current.Next;
-            count++;
+            index--;
         }
     }
 }
