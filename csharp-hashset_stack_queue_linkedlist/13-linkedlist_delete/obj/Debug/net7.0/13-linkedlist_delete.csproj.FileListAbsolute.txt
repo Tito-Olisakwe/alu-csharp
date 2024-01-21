@@ -1,0 +1,5 @@
+/workspaces/alu-csharp/csharp-hashset_stack_queue_linkedlist/13-linkedlist_delete/obj/Debug/net7.0/13-linkedlist_delete.csproj.AssemblyReference.cache
+/workspaces/alu-csharp/csharp-hashset_stack_queue_linkedlist/13-linkedlist_delete/obj/Debug/net7.0/13-linkedlist_delete.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/alu-csharp/csharp-hashset_stack_queue_linkedlist/13-linkedlist_delete/obj/Debug/net7.0/13-linkedlist_delete.AssemblyInfoInputs.cache
+/workspaces/alu-csharp/csharp-hashset_stack_queue_linkedlist/13-linkedlist_delete/obj/Debug/net7.0/13-linkedlist_delete.AssemblyInfo.cs
+/workspaces/alu-csharp/csharp-hashset_stack_queue_linkedlist/13-linkedlist_delete/obj/Debug/net7.0/13-linkedlist_delete.csproj.CoreCompileInputs.cache
