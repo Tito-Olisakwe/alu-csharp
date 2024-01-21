@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class LList
 {
     public static int GetNode(LinkedList<int> myLList, int n)
@@ -25,11 +22,10 @@ public class LList
         // Check if the nth node is found and return its value
         if (current != null && index == n)
         {
-            return current.Value;
+            return current?.Value ?? 0;  // Null-conditional operator to prevent NullReferenceException
         }
 
         // Return 0 if the nth node does not exist
         return 0;
     }
 }
-
