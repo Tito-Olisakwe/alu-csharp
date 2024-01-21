@@ -4,7 +4,8 @@ using System.Collections.Generic;
 public class LList
 {
     public static int GetNode(LinkedList<int> myLList, int n)
-    // Return 0 for a null list or a negative index
+    {
+        // Return 0 for a null list or a negative index
         if (myLList == null || n < 0)
         {
             return 0;
