@@ -1,3 +1,12 @@
+using System;
+
+public enum Rating
+{
+    Good,
+    Great,
+    Excellent
+}
+
 public struct Dog
 {
     public string name;
@@ -5,6 +14,7 @@ public struct Dog
     public string owner;
     public Rating rating;
 
+    // Constructor for the Dog struct
     public Dog(string name, float age, string owner, Rating rating)
     {
         this.name = name;
