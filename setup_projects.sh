@@ -11,8 +11,20 @@ setup_directory() {
     # Initialize a new .NET console project
     dotnet new console
 
-    # Modify the Program.cs file to comment out the Console.WriteLine line
-    sed -i 's/Console.WriteLine/\/\/ Console.WriteLine/g' Program.cs
+    # Delete the Program.cs file
+    rm Program.cs
+
+    # Find the .csproj file
+    CS_PROJ_FILE=$(ls *.csproj)
+
+    # Modify the .csproj file with new content
+    echo '<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    </Project>' > "$CS_PROJ_FILE"
 
     # Create an empty C# file named after the directory
     touch "$1.cs"
