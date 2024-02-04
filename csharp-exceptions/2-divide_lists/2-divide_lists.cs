@@ -11,7 +11,9 @@ public class List
         {
             try
             {
-                result.Add(list1[i] / list2[i]);
+                // Attempt to add the division result to the list
+                int divisionResult = list1[i] / list2[i];
+                result.Add(divisionResult);
             }
             catch (DivideByZeroException)
             {
@@ -21,7 +23,6 @@ public class List
             catch (ArgumentOutOfRangeException)
             {
                 Console.WriteLine("Out of range");
-                break; // Exit the loop if attempting to access beyond the lists' bounds
             }
         }
 
