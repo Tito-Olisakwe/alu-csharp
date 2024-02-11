@@ -23,6 +23,7 @@ setup_directory() {
         <OutputType>Exe</OutputType>
         <TargetFramework>net7.0</TargetFramework>
         <LangVersion>latest</LangVersion>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     </PropertyGroup>
     </Project>' > "$CS_PROJ_FILE"
 
