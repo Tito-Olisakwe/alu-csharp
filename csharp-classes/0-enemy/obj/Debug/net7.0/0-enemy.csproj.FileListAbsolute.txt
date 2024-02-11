@@ -1,0 +1,16 @@
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/0-enemy.csproj.AssemblyReference.cache
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/0-enemy.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/0-enemy.AssemblyInfoInputs.cache
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/0-enemy.AssemblyInfo.cs
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/0-enemy.csproj.CoreCompileInputs.cache
+/workspaces/alu-csharp/csharp-classes/0-enemy/bin/Debug/net7.0/0-enemy
+/workspaces/alu-csharp/csharp-classes/0-enemy/bin/Debug/net7.0/0-enemy.deps.json
+/workspaces/alu-csharp/csharp-classes/0-enemy/bin/Debug/net7.0/0-enemy.runtimeconfig.json
+/workspaces/alu-csharp/csharp-classes/0-enemy/bin/Debug/net7.0/0-enemy.dll
+/workspaces/alu-csharp/csharp-classes/0-enemy/bin/Debug/net7.0/0-enemy.pdb
+/workspaces/alu-csharp/csharp-classes/0-enemy/bin/Debug/net7.0/0-enemy.xml
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/0-enemy.dll
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/refint/0-enemy.dll
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/0-enemy.pdb
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/0-enemy.genruntimeconfig.cache
+/workspaces/alu-csharp/csharp-classes/0-enemy/obj/Debug/net7.0/ref/0-enemy.dll
