@@ -23,7 +23,7 @@ setup_directory() {
         <OutputType>Exe</OutputType>
         <TargetFramework>net7.0</TargetFramework>
         <LangVersion>latest</LangVersion>
-        <DocumentationFile>bin/Debug/netcoreapp2.1/0-enemy.xml</DocumentationFile>
+        <DocumentationFile>bin/Debug/netcoreapp2.1/$1.xml</DocumentationFile>
     </PropertyGroup>
     </Project>' > "$CS_PROJ_FILE"
 
