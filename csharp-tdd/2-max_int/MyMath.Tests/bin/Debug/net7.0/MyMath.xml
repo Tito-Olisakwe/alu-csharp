@@ -1,15 +1,8 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>MyMath</name>
+        <name>MyMath.Tests</name>
     </assembly>
     <members>
-        <member name="M:MyMath.Operations.Max(System.Collections.Generic.List{System.Int32})">
-            <summary>
-            Finds the maximum integer in a list.
-            </summary>
-            <param name="nums"></param>
-            <returns>The maximum integer in the list, or 0 if the list is empty.</returns>
-        </member>
     </members>
 </doc>

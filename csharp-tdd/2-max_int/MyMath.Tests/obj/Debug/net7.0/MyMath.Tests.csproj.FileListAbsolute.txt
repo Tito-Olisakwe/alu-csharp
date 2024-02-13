@@ -5,7 +5,6 @@
 /workspaces/alu-csharp/csharp-tdd/2-max_int/MyMath.Tests/bin/Debug/net7.0/nunit.engine.api.dll
 /workspaces/alu-csharp/csharp-tdd/2-max_int/MyMath.Tests/bin/Debug/net7.0/nunit.engine.core.dll
 /workspaces/alu-csharp/csharp-tdd/2-max_int/MyMath.Tests/bin/Debug/net7.0/testcentric.engine.metadata.dll
-/workspaces/alu-csharp/csharp-tdd/2-max_int/MyMath.Tests/bin/Debug/net7.0/MyMath.Tests.xml
 /workspaces/alu-csharp/csharp-tdd/2-max_int/MyMath.Tests/bin/Debug/net7.0/MyMath.Tests.deps.json
 /workspaces/alu-csharp/csharp-tdd/2-max_int/MyMath.Tests/bin/Debug/net7.0/MyMath.Tests.runtimeconfig.json
 /workspaces/alu-csharp/csharp-tdd/2-max_int/MyMath.Tests/bin/Debug/net7.0/MyMath.Tests.dll
