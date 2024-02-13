@@ -1,4 +1,5 @@
-namespace Text.Tests;
+using NUnit.Framework;
+using Text;
 
 public class Tests
 {
@@ -7,9 +8,12 @@ public class Tests
     {
     }
 
-    [Test]
-    public void Test1()
+    [TestCase(0,"")]
+    [TestCase(1, "word")]
+    [TestCase(4, "thisDayWillCome")]
+    public void TestWordCount(int words, string sentence)
     {
-        Assert.Pass();
+        int result = Str.CamelCase(sentence);
+        Assert.That(words, Is.EqualTo(result));
     }
 }
