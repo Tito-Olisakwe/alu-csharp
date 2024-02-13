@@ -1,0 +1,13 @@
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/bin/Debug/net7.0/Text.xml
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/bin/Debug/net7.0/Text.deps.json
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/bin/Debug/net7.0/Text.dll
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/bin/Debug/net7.0/Text.pdb
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/obj/Debug/net7.0/Text.csproj.AssemblyReference.cache
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/obj/Debug/net7.0/Text.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/obj/Debug/net7.0/Text.AssemblyInfoInputs.cache
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/obj/Debug/net7.0/Text.AssemblyInfo.cs
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/obj/Debug/net7.0/Text.csproj.CoreCompileInputs.cache
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/obj/Debug/net7.0/Text.dll
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/obj/Debug/net7.0/refint/Text.dll
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/obj/Debug/net7.0/Text.pdb
+/workspaces/alu-csharp/csharp-tdd/3-palindrome/Text/obj/Debug/net7.0/ref/Text.dll
