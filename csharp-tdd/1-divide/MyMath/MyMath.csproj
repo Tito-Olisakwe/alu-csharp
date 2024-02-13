@@ -4,6 +4,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <DocumentationFile>bin/Debug/netcoreapp2.1/1-divide.xml</DocumentationFile>
+    <DocumentationFile>bin/Debug/netcoreapp2.0/1-divide.xml</DocumentationFile>
   </PropertyGroup>
 </Project>
