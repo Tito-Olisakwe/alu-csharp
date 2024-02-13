@@ -1,4 +1,7 @@
-namespace MyMath.Tests;
+using System;
+using System.Numerics;
+using MyMath;
+
 
 public class Tests
 {
@@ -8,8 +11,16 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void TestNull()
     {
-        Assert.Pass();
+        List<int> testList = new List<int>() { };
+        Assert.That(0, Is.EqualTo(Operations.Max(testList)));
+    }
+
+    [TestCase(90)]
+    public void TestMaxNumber(int value)
+    {
+        List<int> TempList = new List<int>() { 19, 10, 56, 90 };
+        Assert.That(90, Is.EqualTo(Operations.Max(TempList)));
     }
 }
