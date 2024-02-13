@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Check if at least one argument is provided
@@ -18,7 +17,7 @@ for project in "$@"; do
     dotnet new sln
 
     # Create the class library project
-    mkdir MyMath && cd MyMath
+    mkdir Text && cd Text
     dotnet new classlib --framework net7.0
     # Update the .csproj file to the required configuration
     echo '<Project Sdk="Microsoft.NET.Sdk">
@@ -29,14 +28,14 @@ for project in "$@"; do
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
-</Project>' > MyMath.csproj
+</Project>' > Text.csproj
     cd ..
 
     # Add the class library project to the solution
-    dotnet sln add MyMath/MyMath.csproj
+    dotnet sln add Text/Text.csproj
 
     # Create the test library project
-    mkdir MyMath.Tests && cd MyMath.Tests
+    mkdir Text.Tests && cd Text.Tests
     dotnet new nunit --framework net7.0
     # Update the .csproj for the test project similarly
     echo '<Project Sdk="Microsoft.NET.Sdk">
@@ -61,22 +60,23 @@ for project in "$@"; do
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyMath\MyMath.csproj" />
+    <ProjectReference Include="..\Text\Text.csproj" />
   </ItemGroup>
 
-</Project>' > MyMath.Tests.csproj
+</Project>' > Text.Tests.csproj
     # Add reference to the class library
-    dotnet add reference ../MyMath/MyMath.csproj
+    dotnet add reference ../Text/Text.csproj
     cd ..
 
     # Add the test library project to the solution
-    dotnet sln add MyMath.Tests/MyMath.Tests.csproj
+    dotnet sln add Text.Tests/Text.Tests.csproj
 
     # Navigate back to the original directory
     cd ..
 done
 
 echo "Setup complete."
+
 
 
 
