@@ -1,5 +1,8 @@
 using System;
 
+/// <summary>
+/// Contains methods for type checking.
+/// </summary>
 public class Obj
 {
     /// <summary>
