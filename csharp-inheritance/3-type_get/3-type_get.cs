@@ -12,27 +12,26 @@ public class Obj
     /// <param name="myObj">Object from where to get informations.</param>
     public static void Print(object myObj)
     {
-        TypeInfo typeInfo = myObj.GetType().GetTypeInfo();
-
-        Console.WriteLine($"{typeInfo.Name} Properties:");
-        foreach (PropertyInfo prop in typeInfo.GetProperties())
+        Type type = myObj.GetType();
+        Console.WriteLine($"{type.Name} Properties:");
+        foreach (var prop in type.GetProperties())
         {
             Console.WriteLine(prop.Name);
         }
 
-        Console.WriteLine($"{typeInfo.Name} Methods:");
-        // Directly listing the expected method names in their expected order and count
-        var expectedMethodNames = new List<string>
-        {
-            "CompareTo", "CompareTo", "Equals", "Equals", "GetHashCode",
-            "ToString", "ToString", "ToString", "ToString", "TryFormat",
-            "Parse", "Parse", "Parse", "Parse", "Parse",
-            "TryParse", "TryParse", "TryParse", "TryParse",
-            "GetTypeCode", "GetType"
-        };
+        Console.WriteLine($"{type.Name} Methods:");
+        var methods = type.GetMethods().Where(m => !m.IsSpecialName && m.DeclaringType == type);
 
-        // This assumes that the specified methods are present and skips the check for existence
-        foreach (string methodName in expectedMethodNames)
+        // Example of a type-specific filter (conceptual, not fully implemented)
+        var filteredMethods = methods.Select(m => m.Name).Distinct();
+        if (type == typeof(String))
+        {
+            // Add or remove specific methods for the String type
+            filteredMethods = filteredMethods.Where(name => !name.StartsWith("get_") && !name.StartsWith("set_"));
+        }
+        // Additional type checks and filters could be added here
+
+        foreach (var methodName in filteredMethods.OrderBy(name => name))
         {
             Console.WriteLine(methodName);
         }
