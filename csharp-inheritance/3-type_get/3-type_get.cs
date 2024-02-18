@@ -2,15 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-/// <summary>
-/// Provides functionality to print details of objects.
-/// </summary>
+/// <summary>Represents the class Obj.</summary>
 class Obj
 {
     /// <summary>
-    /// Prints the names of the available properties and methods of an object.
+    /// prints the names of the available properties and methods of an object.
     /// </summary>
-    /// <param name="myObj">The object to inspect.</param>
+    /// <param name="myObj">Object from where to get informations.</param>
     public static void Print(object myObj)
     {
         string cType = myObj.GetType().Name;
