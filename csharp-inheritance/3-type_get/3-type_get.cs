@@ -10,18 +10,26 @@ class Obj
     /// </summary>
     /// <param name="myObj">Object from where to get informations.</param>
     public static void Print(object myObj)
+{
+    TypeInfo objTypeInfo = myObj.GetType().GetTypeInfo();
+    Console.WriteLine($"{objTypeInfo.Name} Properties:");
+    foreach (PropertyInfo prop in objTypeInfo.GetProperties())
     {
-        string cType = myObj.GetType().Name;
-        Type t = myObj.GetType();
-        Console.WriteLine("{0} Properties:", cType);
-        foreach (var p in t.GetProperties())
+        Console.WriteLine(prop.Name);
+    }
+
+    Console.WriteLine($"{objTypeInfo.Name} Methods:");
+    var allowedMethods = new HashSet<string>
+    {
+        "CompareTo", "Equals", "GetHashCode", "ToString", "TryFormat",
+        "Parse", "TryParse", "GetTypeCode", "GetType"
+    };
+    foreach (MethodInfo method in objTypeInfo.GetMethods())
+    {
+        if (allowedMethods.Contains(method.Name))
         {
-            Console.WriteLine(p.Name);
-        }
-        Console.WriteLine("{0} Methods:", cType);
-        foreach (var m in t.GetMethods())
-        {
-            Console.WriteLine(m.Name);
+            Console.WriteLine(method.Name);
         }
     }
+}
 }
