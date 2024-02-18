@@ -25,6 +25,18 @@ public class Obj
         }
 
         Console.WriteLine($"{typeInfo.Name} Methods:");
-        // Filtering logic as previously discussed
+        var allowedMethods = new HashSet<string>
+        {
+            "CompareTo", "Equals", "GetHashCode", "ToString", "TryFormat",
+            "Parse", "TryParse", "GetTypeCode", "GetType"
+        };
+
+        foreach (MethodInfo method in methods)
+        {
+            if (allowedMethods.Contains(method.Name))
+            {
+                Console.WriteLine(method.Name);
+            }
+        }
     }
 }
