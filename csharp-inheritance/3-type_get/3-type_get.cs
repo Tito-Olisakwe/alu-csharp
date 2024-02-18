@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -9,34 +8,27 @@ using System.Reflection;
 public class Obj
 {
     /// <summary>
-    /// Prints the names of the available properties and methods of an object.
+    /// Prints the names of the available properties and methods of an object, excluding overloads.
     /// </summary>
     /// <param name="myObj">The object to inspect.</param>
     public static void Print(object myObj)
     {
         TypeInfo typeInfo = myObj.GetType().GetTypeInfo();
-        IEnumerable<PropertyInfo> properties = typeInfo.GetProperties();
-        IEnumerable<MethodInfo> methods = typeInfo.GetMethods().Where(m => !m.IsSpecialName);
 
         Console.WriteLine($"{typeInfo.Name} Properties:");
-        foreach (PropertyInfo prop in properties)
+        foreach (PropertyInfo prop in typeInfo.GetProperties())
         {
             Console.WriteLine(prop.Name);
         }
 
         Console.WriteLine($"{typeInfo.Name} Methods:");
-        var allowedMethods = new HashSet<string>
+        var methodNames = typeInfo.GetMethods()
+                                   .Where(m => !m.IsSpecialName)
+                                   .Select(m => m.Name)
+                                   .Distinct();
+        foreach (string name in methodNames)
         {
-            "CompareTo", "Equals", "GetHashCode", "ToString", "TryFormat",
-            "Parse", "TryParse", "GetTypeCode", "GetType"
-        };
-
-        foreach (MethodInfo method in methods)
-        {
-            if (allowedMethods.Contains(method.Name))
-            {
-                Console.WriteLine(method.Name);
-            }
+            Console.WriteLine(name);
         }
     }
 }
