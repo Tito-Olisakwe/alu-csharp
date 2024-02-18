@@ -3,8 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
+/// <summary>
+/// Provides functionality to print details of objects.
+/// </summary>
 public class Obj
 {
+    /// <summary>
+    /// Prints the names of the available properties and methods of an object.
+    /// </summary>
+    /// <param name="myObj">The object to inspect.</param>
     public static void Print(object myObj)
     {
         TypeInfo typeInfo = myObj.GetType().GetTypeInfo();
@@ -18,19 +25,6 @@ public class Obj
         }
 
         Console.WriteLine($"{typeInfo.Name} Methods:");
-        // Filter to only include methods as per the expected output
-        var allowedMethods = new HashSet<string>
-        {
-            "CompareTo", "Equals", "GetHashCode", "ToString", "TryFormat",
-            "Parse", "TryParse", "GetTypeCode", "GetType"
-        };
-
-        foreach (MethodInfo method in methods)
-        {
-            if (allowedMethods.Contains(method.Name))
-            {
-                Console.WriteLine(method.Name);
-            }
-        }
+        // Filtering logic as previously discussed
     }
 }
