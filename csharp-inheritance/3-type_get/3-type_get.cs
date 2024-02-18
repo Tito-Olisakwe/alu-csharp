@@ -2,8 +2,14 @@ using System;
 using System.Reflection;
 using System.Collections.Generic;
 
+    /// <summary>Represents the class Obj.</summary>
+
 public class Obj
 {
+    /// <summary>
+    /// prints the names of the available properties and methods of an object.
+    /// </summary>
+    /// <param name="myObj">Object from where to get informations.</param>
     public static void Print(object myObj)
     {
         TypeInfo typeInfo = myObj.GetType().GetTypeInfo();
