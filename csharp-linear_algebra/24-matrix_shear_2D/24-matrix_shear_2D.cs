@@ -1,7 +1,13 @@
 using System;
 
+/// <summary>
+/// Utility for a Matrix Math class.
+/// </summary>
 public class MatrixMath
 {
+    /// <summary>
+    /// Method that multiplies two matrices and returns the resulting matrix.
+    /// </summary>
 
     public static double[,] Shear2D(double[,] matrix, char direction, double factor){
         int rows = matrix.GetLength(0);
