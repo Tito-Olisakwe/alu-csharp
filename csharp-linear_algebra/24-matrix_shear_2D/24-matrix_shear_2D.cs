@@ -21,6 +21,7 @@ public class MatrixMath
         }
         
 
+        // matrix 
         if(direction == 'x'){
             
          mMatrix = new double[,]{ 
