@@ -1,5 +1,3 @@
-#nullable enable
-
 using System;
 using System.Collections.Generic;
 
@@ -202,31 +200,28 @@ public class Key : Base, ICollectable
 /// <summary>
 /// Class to manage room objects and iterate through their actions based on their type.
 /// </summary>
-public class RoomObjects
+public static class RoomObjects
 {
     /// <summary>
     /// Iterates through the list of room objects and performs the action based on the specified interface type.
     /// </summary>
-    /// <typeparam name="T">The type of the interface to filter and perform the action on.</typeparam>
     /// <param name="roomObjects">The list of room objects.</param>
-    public static void IterateAction<T>(List<Base> roomObjects) where T : class
+    /// <param name="type">The type of the interface to filter and perform the action on.</param>
+    public static void IterateAction(List<Base> roomObjects, Type type)
     {
         foreach (var elem in roomObjects)
         {
-            if (elem is T instance)
+            if (type == typeof(IInteractive) && elem is IInteractive interactive)
             {
-                switch (instance)
-                {
-                    case IInteractive interactive:
-                        interactive.Interact();
-                        break;
-                    case IBreakable breakable:
-                        breakable.Break();
-                        break;
-                    case ICollectable collectable:
-                        collectable.Collect();
-                        break;
-                }
+                interactive.Interact();
+            }
+            else if (type == typeof(IBreakable) && elem is IBreakable breakable)
+            {
+                breakable.Break();
+            }
+            else if (type == typeof(ICollectable) && elem is ICollectable collectable)
+            {
+                collectable.Collect();
             }
         }
     }
