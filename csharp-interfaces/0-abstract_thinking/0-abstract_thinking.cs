@@ -13,6 +13,14 @@ abstract class Base
     public string name {get; set;}
 
     /// <summary>
+    /// Constructor to initialize the name property.
+    /// </summary>
+    protected Base(string name)
+    {
+        this.name = name ?? throw new ArgumentNullException(nameof(name));
+    }
+
+    /// <summary>
     /// Overrides the default ToString() method to display custom properties.
     /// </summary>
     /// <returns>A string representation of the object, including its name and type.</returns>
