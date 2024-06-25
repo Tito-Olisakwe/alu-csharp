@@ -10,7 +10,7 @@ abstract class Base
     /// <summary>
     /// Gets or sets the name associated with the instance.
     /// </summary>
-    public string name? {get; set;}
+    public string name {get; set;}
 
     /// <summary>
     /// Overrides the default ToString() method to display custom properties.
