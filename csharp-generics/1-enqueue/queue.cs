@@ -1,55 +1,35 @@
-using System;
+﻿using System;
+
 
 /// <summary>
-/// Represents a queue of a specified type.
+/// queue of type defined
 /// </summary>
-/// <typeparam name="T">The type of elements in the queue.</typeparam>
-public class Queue<T>
-{
-    /// <summary>
-    /// Represents a node in the queue.
-    /// </summary>
-    public class Node
-    {
-        /// <summary>
-        /// The value stored in the node.
-        /// </summary>
-        public T? Value;
+/// <typeparam name="T"></typeparam>
+public class Queue<T>  {
 
-        /// <summary>
-        /// The next node in the queue.
-        /// </summary>
+
+/// <summary>
+/// Node class struct
+/// </summary>
+    public class Node{
+
+        public T? Value;
         public Node? Next;
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Node"/> class.
-        /// </summary>
-        /// <param name="value">The value to store in the node.</param>
-        public Node(T value)
-        {
+        public Node(T value){
             Value = value;
             Next = null;
         }
     }
 
-    /// <summary>
-    /// The first node in the queue.
-    /// </summary>
+// first element of queue
     protected Node? head;
-
-    /// <summary>
-    /// The last node in the queue.
-    /// </summary>
+    // last element of the queue
     protected Node? tail;
-
-    /// <summary>
-    /// The number of items in the queue.
-    /// </summary>
+    // number of items in queue
     int count;
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="Queue{T}"/> class.
-    /// </summary>
+// constructor assignment
     public Queue()
     {
         head = null;
@@ -57,42 +37,43 @@ public class Queue<T>
         count = 0;
     }
 
-    /// <summary>
-    /// Adds an element to the end of the queue.
-    /// </summary>
-    /// <param name="value">The value to add to the queue.</param>
-    public void Enqueue(T? value)
-    {
+
+/// <summary>
+/// adding elements at queue end
+/// </summary>
+/// <param name="value"></param>
+    public void Enqueue(T? value){
+
         Node newNode = new Node(value!);
-        
-        if (head == null)
-        {
+    
+        if(head == null){
             head = newNode;
             tail = newNode;
-        }
-        else
-        {
+        }else{
             tail!.Next = newNode;
             tail = newNode;
         }
-        count++;
+         count++;
     }
 
-    /// <summary>
-    /// Returns the type of the elements in the queue.
-    /// </summary>
-    /// <returns>The type of the elements in the queue.</returns>
-    public Type CheckType()
-    {
+    
+    
+
+/// <summary>
+/// returns type of generic
+/// </summary>
+/// <returns></returns>
+    public Type CheckType(){
         return typeof(T);
     }
 
-    /// <summary>
-    /// Returns the number of items in the queue.
-    /// </summary>
-    /// <returns>The number of items in the queue.</returns>
-    public int Count()
-    {
+/// <summary>
+/// returns the number of items
+/// </summary>
+/// <returns></returns>
+    public int Count(){
         return count;
     }
+    
 }
+
