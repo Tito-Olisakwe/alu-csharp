@@ -183,22 +183,3 @@ public class Queue<T>
     }
 }
 
-/// <summary>
-/// Program class with the Main method
-/// </summary>
-public class Program
-{
-    /// <summary>
-    /// The entry point of the program
-    /// </summary>
-    /// <param name="args">The command-line arguments</param>
-    public static void Main(string[] args)
-    {
-        Queue<string> queue = new Queue<string>();
-        queue.Enqueue("Hello");
-        queue.Enqueue("Holberton");
-        queue.Enqueue("School");
-
-        Console.WriteLine(queue.Concatenate());
-    }
-}
