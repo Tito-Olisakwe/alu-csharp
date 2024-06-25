@@ -1,3 +1,5 @@
+#nullable enable
+
 using System;
 
 /// <summary>
@@ -128,7 +130,7 @@ public class Queue<T>
             return;
         }
 
-        Node current = head;
+        Node? current = head;
         while (current != null)
         {
             Console.WriteLine(current.Value);
