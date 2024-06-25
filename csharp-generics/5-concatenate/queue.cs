@@ -5,16 +5,30 @@ using System;
 /// <summary>
 /// Queue of type defined
 /// </summary>
-/// <typeparam name="T"></typeparam>
-public class Queue<T>  {
+/// <typeparam name="T">The type of elements in the queue</typeparam>
+public class Queue<T>
+{
     /// <summary>
     /// Node class struct
     /// </summary>
-    public class Node {
+    public class Node
+    {
+        /// <summary>
+        /// Gets or sets the value of the node
+        /// </summary>
         public T? Value;
+
+        /// <summary>
+        /// Gets or sets the next node in the queue
+        /// </summary>
         public Node? Next;
 
-        public Node(T value) {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Node"/> class.
+        /// </summary>
+        /// <param name="value">The value of the node</param>
+        public Node(T value)
+        {
             Value = value;
             Next = null;
         }
@@ -30,23 +44,28 @@ public class Queue<T>  {
     int count;
 
     // Constructor assignment
-    public Queue() {
+    public Queue()
+    {
         head = null;
         tail = null;
         count = 0;
     }
 
     /// <summary>
-    /// Adding elements at queue end
+    /// Adds an element at the end of the queue
     /// </summary>
-    /// <param name="value"></param>
-    public void Enqueue(T value) {
+    /// <param name="value">The value to be added to the queue</param>
+    public void Enqueue(T value)
+    {
         Node newNode = new Node(value);
 
-        if (head == null) {
+        if (head == null)
+        {
             head = newNode;
             tail = newNode;
-        } else {
+        }
+        else
+        {
             tail!.Next = newNode;
             tail = newNode;
         }
@@ -54,11 +73,13 @@ public class Queue<T>  {
     }
 
     /// <summary>
-    /// Decrements the queue and returns the type 
+    /// Removes and returns the element at the beginning of the queue
     /// </summary>
-    /// <returns></returns>
-    public T? Dequeue() {
-        if (count == 0) {
+    /// <returns>The value of the removed element</returns>
+    public T? Dequeue()
+    {
+        if (count == 0)
+        {
             Console.WriteLine("Queue is empty");
             return default(T);
         }
@@ -67,7 +88,8 @@ public class Queue<T>  {
         head = head!.Next;
         count--;
 
-        if (count == 0) {
+        if (count == 0)
+        {
             tail = null;
         }
 
@@ -75,11 +97,13 @@ public class Queue<T>  {
     }
 
     /// <summary>
-    /// Returns the first element without removing from queue
+    /// Returns the first element without removing it from the queue
     /// </summary>
-    /// <returns></returns>
-    public T? Peek() {
-        if (count == 0) {
+    /// <returns>The value of the first element</returns>
+    public T? Peek()
+    {
+        if (count == 0)
+        {
             Console.WriteLine("Queue is empty");
             return default(T);
         }
@@ -88,32 +112,38 @@ public class Queue<T>  {
     }
 
     /// <summary>
-    /// Displays all elements in queue
+    /// Displays all elements in the queue
     /// </summary>
-    public void Print() {
-        if (count == 0) {
+    public void Print()
+    {
+        if (count == 0)
+        {
             Console.WriteLine("Queue is empty");
             return;
         }
 
         Node? current = head;
-        while (current != null) {
+        while (current != null)
+        {
             Console.WriteLine(current.Value);
             current = current.Next;
         }
     }
 
     /// <summary>
-    /// Combines string or chars together
+    /// Combines strings or chars in the queue into a single string
     /// </summary>
-    /// <returns></returns>
-    public string? Concatenate() {
-        if (count == 0) {
+    /// <returns>A concatenated string of all elements in the queue</returns>
+    public string? Concatenate()
+    {
+        if (count == 0)
+        {
             Console.WriteLine("Queue is empty");
             return null;
         }
 
-        if (CheckType() != typeof(string) && CheckType() != typeof(char)) {
+        if (CheckType() != typeof(string) && CheckType() != typeof(char))
+        {
             Console.WriteLine("Concatenate() is for a queue of Strings or Chars");
             return null;
         }
@@ -121,9 +151,11 @@ public class Queue<T>  {
         string outputValue = "";
 
         Node? current = head;
-        while (current != null) {
+        while (current != null)
+        {
             outputValue += current.Value;
-            if (CheckType() == typeof(string)) {
+            if (CheckType() == typeof(string))
+            {
                 outputValue += " ";
             }
             current = current.Next;
@@ -133,24 +165,33 @@ public class Queue<T>  {
     }
 
     /// <summary>
-    /// Returns type of generic
+    /// Returns the type of the generic
     /// </summary>
-    /// <returns></returns>
-    public Type CheckType() {
+    /// <returns>The type of the elements in the queue</returns>
+    public Type CheckType()
+    {
         return typeof(T);
     }
 
     /// <summary>
-    /// Returns the number of items
+    /// Returns the number of items in the queue
     /// </summary>
-    /// <returns></returns>
-    public int Count() {
+    /// <returns>The number of elements in the queue</returns>
+    public int Count()
+    {
         return count;
     }
 }
 
+/// <summary>
+/// Program class with the Main method
+/// </summary>
 public class Program
 {
+    /// <summary>
+    /// The entry point of the program
+    /// </summary>
+    /// <param name="args">The command-line arguments</param>
     public static void Main(string[] args)
     {
         Queue<string> queue = new Queue<string>();
