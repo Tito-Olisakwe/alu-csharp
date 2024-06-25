@@ -1,4 +1,13 @@
+#nullable enable
+
 using System;
+
+class Program
+{
+    static void Main()
+    {
+    }
+}
 
 /// <summary>
 /// Base class providing foundational properties for inheritance.
