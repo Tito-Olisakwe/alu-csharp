@@ -10,7 +10,7 @@ public abstract class Base
     /// <summary>
     /// Gets or sets the name associated with the instance. Nullable to allow for optional assignment.
     /// </summary>
-    private string? name { get; set; }
+    public string? name { get; set; }
 
     /// <summary>
     /// Overrides the default ToString() method to display custom properties.
@@ -18,7 +18,7 @@ public abstract class Base
     /// <returns>A string representation of the object, including its name and type.</returns>
     public override string ToString()
     {
-        return $"{name} is a {this.GetType()}";
+        return $"{name} is a {this.GetType().Name}";
     }
 }
 
