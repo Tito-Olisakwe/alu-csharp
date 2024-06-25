@@ -24,7 +24,9 @@ public class Player
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
         }
 
-        this.name = name ?? throw new ArgumentNullException(nameof(name), "Player name cannot be null.");
+        // Handle null or empty string for name
+        this.name = !string.IsNullOrEmpty(name) ? name : "Player";
+        
         this.maxHp = maxHp;
         this.hp = maxHp;
     }
