@@ -7,17 +7,15 @@ using System;
 /// </summary>
 abstract class Base
 {
+    private string _name = string.Empty; // Backing field with default value
+
     /// <summary>
     /// Gets or sets the name associated with the instance.
     /// </summary>
-    public string name {get; set;}
-
-    /// <summary>
-    /// Constructor to initialize the name property.
-    /// </summary>
-    protected Base(string name)
+    public string name
     {
-        this.name = name ?? throw new ArgumentNullException(nameof(name));
+        get => _name;
+        set => _name = value ?? throw new ArgumentNullException(nameof(value));
     }
 
     /// <summary>
