@@ -5,32 +5,7 @@ class Program
 {
     static void Main()
     {
-        // Example usage of Queue<T>
-        Queue<string> stringQueue = new Queue<string>();
 
-        // Enqueue some values
-        stringQueue.Enqueue("Hello");
-        stringQueue.Enqueue("Holberton");
-        stringQueue.Enqueue("School");
-
-        // Print all elements
-        Console.WriteLine("Printing elements:");
-        stringQueue.Print();
-
-        // Dequeue and print elements
-        Console.WriteLine("\nDequeueing elements:");
-        Console.WriteLine(stringQueue.Dequeue());
-        Console.WriteLine(stringQueue.Dequeue());
-        Console.WriteLine(stringQueue.Dequeue());
-
-        // Check count after dequeue
-        Console.WriteLine("\nRemaining count in queue: " + stringQueue.Count());
-
-        // Concatenate strings
-        stringQueue.Enqueue("Hello");
-        stringQueue.Enqueue("World");
-        Console.WriteLine("\nConcatenated string:");
-        Console.WriteLine(stringQueue.Concatenate());
     }
 }
 
