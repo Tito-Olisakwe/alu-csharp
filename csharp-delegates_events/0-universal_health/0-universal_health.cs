@@ -25,7 +25,7 @@ public class Player
         }
 
         // Handle null or empty string for name
-        this.name = !string.IsNullOrEmpty(name) ? name : "Player";
+        this.name = !string.IsNullOrEmpty(name) ? name : " ";
         
         this.maxHp = maxHp;
         this.hp = maxHp;
@@ -36,6 +36,6 @@ public class Player
     /// </summary>
     public void PrintHealth()
     {
-        Console.WriteLine($" has {hp} / {maxHp} health");
+        Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
 }
