@@ -69,7 +69,7 @@ public class Player
     /// </summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{name} has {hp:F1} / {maxHp:F1} health");
+        Console.WriteLine($"{name} has {FormatNumber(hp)} / {FormatNumber(maxHp)} health");
     }
 
     /// <summary>
@@ -84,7 +84,7 @@ public class Player
             return;
         }
 
-        Console.WriteLine($"{name} takes {damage:F1} damage!");
+        Console.WriteLine($"{name} takes {FormatNumber(damage)} damage!");
         ValidateHP(hp - damage);
     }
 
@@ -100,7 +100,7 @@ public class Player
             return;
         }
 
-        Console.WriteLine($"{name} heals {heal:F1} HP!");
+        Console.WriteLine($"{name} heals {FormatNumber(heal)} HP!");
         ValidateHP(hp + heal);
     }
 
@@ -146,5 +146,22 @@ public class Player
                 break;
         }
         return modifiedVal;
+    }
+
+    /// <summary>
+    /// Formats a number to remove unnecessary decimal places.
+    /// </summary>
+    /// <param name="number">The number to format.</param>
+    /// <returns>The formatted number as a string.</returns>
+    private string FormatNumber(float number)
+    {
+        if (number % 1 == 0)
+        {
+            return ((int)number).ToString();
+        }
+        else
+        {
+            return number.ToString("0.##");
+        }
     }
 }
