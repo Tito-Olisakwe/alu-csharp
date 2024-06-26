@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/KMSsP70rAGcPcPxc0N5shZxSFr97iSqJVq/+zSovaDXJyQ7/+SIL6fLg7+aNebDBrVN9FtVmt7bqXp7a3L7yA==",
+  "dgSpecHash": "/RapqxQTEiM=",
   "success": true,
-  "projectFilePath": "/workspaces/alu-csharp/csharp-arrays_lists_dictionaries/1-element_at/1-element_at.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\learn\\gitrepos\\alu-csharp\\csharp-arrays_lists_dictionaries\\1-element_at\\1-element_at.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

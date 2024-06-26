@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mJ917kNYDftzzDAANHCrdQu9ZkkKZ9MG6pPJKuBhl7EgB9kNSep7TfCBKxZ+P97TPYqciHi//Wh4M9321f5ZNA==",
+  "dgSpecHash": "3Ur8IBokg5E=",
   "success": true,
-  "projectFilePath": "/workspaces/alu-csharp/csharp-arrays_lists_dictionaries/6-divisible_by_2/6-divisible_by_2.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\learn\\gitrepos\\alu-csharp\\csharp-arrays_lists_dictionaries\\6-divisible_by_2\\6-divisible_by_2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "789wtrmB+b4Bg7h/nRtWiIQrjWjYsVtuk9Q5yJwuhF6/oDKP3cSxffK1eJPCbgq27lA6tTAXQ+K+1dFCuaSDCQ==",
+  "dgSpecHash": "n5RH3QU5wyo=",
   "success": true,
-  "projectFilePath": "/workspaces/alu-csharp/csharp-ifelse_loops_methods/4-print_hexa/4-print_hexa.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\learn\\gitrepos\\alu-csharp\\csharp-ifelse_loops_methods\\4-print_hexa\\4-print_hexa.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "hgkyLwLx9SRy6QNphNgfp9PtHpGbvFn0HYvs3f06l4RlgiJ9+Y56oHAbwlZO6v0vyxN2zgsNodXjVHM/Boy+fQ==",
+  "dgSpecHash": "RfLt4CXbN6Y=",
   "success": true,
-  "projectFilePath": "/workspaces/alu-csharp/csharp-arrays_lists_dictionaries/3-print_array_reverse/3-print_array_reverse.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\learn\\gitrepos\\alu-csharp\\csharp-arrays_lists_dictionaries\\3-print_array_reverse\\3-print_array_reverse.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

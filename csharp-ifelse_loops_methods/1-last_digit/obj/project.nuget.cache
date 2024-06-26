@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "0GFFSgX5WauE/TM8c9KtnsWW12E/Q+J61QdlbeNz0V32Ze/MBB98tpPBy7s+Gn80H7VWgEP74us0/s9+TjRHiQ==",
+  "dgSpecHash": "Q0t3wVMnVgQ=",
   "success": true,
-  "projectFilePath": "/workspaces/alu-csharp/csharp-ifelse_loops_methods/1-last_digit/1-last_digit.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\learn\\gitrepos\\alu-csharp\\csharp-ifelse_loops_methods\\1-last_digit\\1-last_digit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

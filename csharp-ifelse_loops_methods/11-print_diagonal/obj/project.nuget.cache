@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "aDYzAm24nT0PhqZd7t9Fe8up5uhq0NdXbiaekqjguXktjBGCM8GceXQYN2b8f+bs8uKFkh8gj2SC5rzuW5baMQ==",
+  "dgSpecHash": "o+pp07dQ5bk=",
   "success": true,
-  "projectFilePath": "/workspaces/alu-csharp/csharp-ifelse_loops_methods/11-print_diagonal/11-print_diagonal.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\learn\\gitrepos\\alu-csharp\\csharp-ifelse_loops_methods\\11-print_diagonal\\11-print_diagonal.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

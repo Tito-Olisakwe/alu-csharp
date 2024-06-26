@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zzOdFxWGgcDuMR+32/JNVvupko53iZOHC3gicc5UEORELLV4r9og3omU/ZI293O5fFFJufUWpsyPEkTHYdOvhA==",
+  "dgSpecHash": "bxxxr8fOmWQ=",
   "success": true,
-  "projectFilePath": "/workspaces/alu-csharp/csharp-hello_world/8-print_variables/8-print_variables.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\learn\\gitrepos\\alu-csharp\\csharp-hello_world\\8-print_variables\\8-print_variables.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }

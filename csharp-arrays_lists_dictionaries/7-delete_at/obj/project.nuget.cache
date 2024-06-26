@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "sAltlPYi6EUxRaBxXQ5zK4Ig7+n0dx9DuJSPiX4c6E+UQ5v/pJo3nPmRYxN+Uy595leFefSqXFnIn2scr4uadA==",
+  "dgSpecHash": "x67mswgHlCk=",
   "success": true,
-  "projectFilePath": "/workspaces/alu-csharp/csharp-arrays_lists_dictionaries/7-delete_at/7-delete_at.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\learn\\gitrepos\\alu-csharp\\csharp-arrays_lists_dictionaries\\7-delete_at\\7-delete_at.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
