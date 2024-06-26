@@ -1,5 +1,7 @@
 #nullable enable
 
+using System;
+
 /// <summary>
 /// Modifier used with delegates
 /// </summary>
