@@ -1,5 +1,3 @@
-#nullable enable
-
 using System;
 
 /// <summary>
@@ -71,7 +69,7 @@ public class Player
     /// </summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{name} has {hp} / {maxHp} health");
+        Console.WriteLine($"{name} has {hp:F1} / {maxHp:F1} health");
     }
 
     /// <summary>
@@ -86,7 +84,7 @@ public class Player
             return;
         }
 
-        Console.WriteLine($"{name} takes {damage} damage!");
+        Console.WriteLine($"{name} takes {damage:F1} damage!");
         ValidateHP(hp - damage);
     }
 
@@ -102,7 +100,7 @@ public class Player
             return;
         }
 
-        Console.WriteLine($"{name} heals {heal} HP!");
+        Console.WriteLine($"{name} heals {heal:F1} HP!");
         ValidateHP(hp + heal);
     }
 
