@@ -24,7 +24,7 @@ public enum Modifier
 /// <summary>
 /// Player's CalculateHealth Delegate
 /// </summary>
-/// <param name="amount">Amount for health,</param>
+/// <param name="amount">Amount for health</param>
 public delegate void CalculateHealth(float amount);
 
 /// <summary>
@@ -32,7 +32,7 @@ public delegate void CalculateHealth(float amount);
 /// </summary>
 /// <param name="baseValue">Base value</param>
 /// <param name="modifier">Modifier: Weak, Base, Strong</param>
-/// <returns>Returns a delegate</returns>
+/// <returns>Returns a modified value</returns>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
 /// <summary>
@@ -41,19 +41,16 @@ public delegate float CalculateModifier(float baseValue, Modifier modifier);
 public class Player
 {
     /// <summary>
-    /// EventHanlder for CurrentHPArgs
+    /// Event handler for CurrentHPArgs
     /// </summary>
     public event EventHandler<CurrentHPArgs> HPCheck;
 
     // Player's name
     private string name { get; set; }
-
     // Player's max hp
     private float maxHp { get; set; }
-
     // Player's hp
     private float hp { get; set; }
-
     // Player's status
     private string status { get; set; }
 
@@ -62,7 +59,7 @@ public class Player
     /// </summary>
     /// <param name="name">Player's name</param>
     /// <param name="maxHp">Player's max hp</param>
-    /// <param name="status">Player's status </param>
+    /// <param name="status">Player's status</param>
     public Player(string name = "Player", float maxHp = 100f, string status = "Undefined")
     {
         this.name = name;
@@ -77,15 +74,11 @@ public class Player
         {
             this.status = $"{name} is ready to go!";
         }
-        else
-        {
-            this.status = status;
-        }
         HPCheck += CheckStatus;
     }
 
     /// <summary>
-    /// Prints the name and current health of the player.
+    /// Prints the name and current health of the player
     /// </summary>
     public void PrintHealth()
     {
@@ -93,7 +86,7 @@ public class Player
     }
 
     /// <summary>
-    /// Player's take damage
+    /// Player takes damage
     /// </summary>
     /// <param name="damage">Amount of damage taken</param>
     public void TakeDamage(float damage)
@@ -108,7 +101,7 @@ public class Player
     }
 
     /// <summary>
-    /// Player's heal
+    /// Player heals
     /// </summary>
     /// <param name="heal">Amount of heals received</param>
     public void HealDamage(float heal)
@@ -123,9 +116,9 @@ public class Player
     }
 
     /// <summary>
-    /// Define new player's hp depending on occurred event.
+    /// Validates and sets the new player's hp
     /// </summary>
-    /// <param name="newHp">Sets up the new player's hp.</param>
+    /// <param name="newHp">New hp value</param>
     public void ValidateHP(float newHp)
     {
         if (newHp < 0)
@@ -144,11 +137,11 @@ public class Player
     }
 
     /// <summary>
-    /// Method used with delegate to apply a BaseValue depending on the modifier
+    /// Applies a modifier to the base value
     /// </summary>
     /// <param name="baseValue">Base value to apply</param>
-    /// <param name="modifier">Modifier : Weak, Base, Strong</param>
-    /// <returns>Modified base value</returns>
+    /// <param name="modifier">Modifier: Weak, Base, Strong</param>
+    /// <returns>Modified value</returns>
     public float ApplyModifier(float baseValue, Modifier modifier)
     {
         float modifiedVal = baseValue;
@@ -167,18 +160,13 @@ public class Player
         return modifiedVal;
     }
 
-    /// <summary>
-    /// Check player's status based on current HP.
-    /// </summary>
-    /// <param name="sender">Event sender</param>
-    /// <param name="e">Current HP arguments</param>
     private void CheckStatus(object sender, CurrentHPArgs e)
     {
         if (e.currentHp == this.maxHp)
             status = $"{name} is in perfect health!";
         else if (e.currentHp >= (this.maxHp * 0.5) && e.currentHp < this.maxHp)
             status = $"{name} is doing well!";
-        else if (e.currentHp >= (this.maxHp * 0.25) && e.currentHp < this.maxHp * 0.5)
+        else if (e.currentHp >= (this.maxHp * 0.25) && e.currentHp < this.maxHp)
             status = $"{name} isn't doing too great...";
         else if (e.currentHp > 0 && e.currentHp < (this.maxHp * 0.25))
             status = $"{name} needs help!";
@@ -194,15 +182,14 @@ public class Player
 public class CurrentHPArgs : EventArgs
 {
     /// <summary>
-    /// currentHp cannot be modified
+    /// Current hp value
     /// </summary>
-    /// <value>Getter only</value>
     public readonly float currentHp;
 
     /// <summary>
-    /// Takes a float newHp and sets it as currentHp‘s value
+    /// Constructor for CurrentHPArgs
     /// </summary>
-    /// <param name="newHp">New currentHp's value</param>
+    /// <param name="newHp">New hp value</param>
     public CurrentHPArgs(float newHp)
     {
         this.currentHp = newHp;
