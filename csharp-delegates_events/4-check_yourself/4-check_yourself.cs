@@ -1,5 +1,3 @@
-#nullable enable
-
 using System;
 
 /// <summary>
@@ -59,7 +57,6 @@ public class Player
     /// </summary>
     /// <param name="name">Player's name</param>
     /// <param name="maxHp">Player's max hp</param>
-    /// <param name="status">Player's status</param>
     public Player(string name = "Player", float maxHp = 100f)
     {
         this.name = name;
