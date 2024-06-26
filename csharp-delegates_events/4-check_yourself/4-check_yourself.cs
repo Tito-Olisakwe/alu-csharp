@@ -43,7 +43,7 @@ public class Player
     /// <summary>
     /// Event handler for CurrentHPArgs
     /// </summary>
-    public event EventHandler<CurrentHPArgs> HPCheck;
+    public event EventHandler<CurrentHPArgs>? HPCheck;
 
     // Player's name
     private string name { get; set; }
@@ -60,7 +60,7 @@ public class Player
     /// <param name="name">Player's name</param>
     /// <param name="maxHp">Player's max hp</param>
     /// <param name="status">Player's status</param>
-    public Player(string name = "Player", float maxHp = 100f, string status = "Undefined")
+    public Player(string name = "Player", float maxHp = 100f)
     {
         this.name = name;
         if (maxHp <= 0)
@@ -70,10 +70,7 @@ public class Player
         }
         this.maxHp = maxHp;
         this.hp = maxHp;
-        if (status == "Undefined")
-        {
-            this.status = $"{name} is ready to go!";
-        }
+        this.status = $"{name} is ready to go!";
         HPCheck += CheckStatus;
     }
 
@@ -160,7 +157,7 @@ public class Player
         return modifiedVal;
     }
 
-    private void CheckStatus(object sender, CurrentHPArgs e)
+    private void CheckStatus(object? sender, CurrentHPArgs e)
     {
         if (e.currentHp == this.maxHp)
             status = $"{name} is in perfect health!";
