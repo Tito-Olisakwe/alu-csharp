@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6NLg7aKq8h8=",
+  "dgSpecHash": "Tg/q8QVGxYE=",
   "success": true,
   "projectFilePath": "C:\\Users\\learn\\gitrepos\\alu-csharp\\csharp-text_based_interface\\InventoryLibrary\\InventoryLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\learn\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
