@@ -1,88 +1,103 @@
-using InventoryLibrary;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
+namespace InventoryManagement.Tests;
 
-namespace Tests
+public class Tests
 {
-	public class Tests
-	{
-		public static int id;
-		public List<string> ListUsers = new List<string>() { "salah", "wael", "ahmed", "Amine", "salah", "mostafa", "kamel" };
-		public List<string> ListItems = new List<string>() { "shoes", "boat", "pool", "table", "chair", "sofa", "spoon" };
-		public string randomName { get { return getRandomName(); } set { } }
-		public string randomItem { get { return getRandomItem(); } set { } }
+    private static JsonStorage? storage;
+    private User newUser;
+    private Item temp;
+    private Dictionary<string, object> Data;
+    
+    [SetUp]
+    public void Setup()
+    {
+        storage = JsonStorage.Instance;
+        
+        temp = new Item("Nwalahnjie");
+        temp.description = "Testing Descriptions";
+        temp.price = 10f;
+        storage?.New(temp);
+        storage?.New(new Item("Anye"));
+        
+        
+        storage?.New(new User("anTe"));
+        newUser = new User("Nwalahnjie Anye");
+        newUser.date_created = DateTime.Now;
+        
+        storage?.New(newUser);
+        
+        storage?.New(new Inventory(newUser.id!, temp.id!, 20));
+        
+        storage?.Save();
+        
+        storage?.Load();
+    }
+    
+    [TearDown]
+    public void CleanUp()
+    {
+        storage?.EmptyFile();
+    }
 
-		public string getRandomName()
-		{
-			int index = new Random().Next(0, ListUsers.Count);
-			string randomName = ListUsers[index];
 
-			ListUsers.Remove(randomName);
-			return randomName;
-		}
+    [Test]
+    public void Test_User()
+    {
+        User TestUser = new User("Test");
+        
+        Assert.IsTrue(TestUser.name == "Test");
+    }
 
-		public string getRandomItem()
-		{
-			int index = new Random().Next(0, ListItems.Count);
-			string randomItem = ListItems[index];
+    [Test]
+    public void Test_Item()
+    {
+        Item TestItem = new Item("Test");
+        TestItem.price = 10;
+        TestItem.description = "test description";
+        
+        Assert.IsTrue(TestItem.name == "Test");
+        Assert.IsTrue(TestItem.price == 10);
+        Assert.IsTrue(TestItem.description == "test description");
+    }
 
-			ListItems.Remove(randomItem);
-			return randomItem;
-		}
+    [Test]
+    public void Test_Inventory()
+    {
+        Inventory testInventory = new Inventory(newUser.id!, temp.id!, 20);
+        Assert.IsTrue(testInventory.item_id == temp.id);
+        Assert.IsTrue(testInventory.user_id == newUser.id);
+        Assert.IsTrue(testInventory.quantity == 20);
+    }
 
-		public string test_id(BaseClass instance)
-		{
-			id++;
-			return $"{instance.GetType().Name}_" + id;
-		}
+    [Test]
+    public void Test_UserAddition()
+    {
+       int count =  storage.All().Count;
+       Assert.IsTrue(count == 5 );
+    }
 
-		[SetUp]
-		public void Setup()
-		{
-		}
+    [Test]
+    public void Test_Adding()
+    {
+        User AnotherUser = new User("Test");
+        storage?.New(AnotherUser);
+        storage.Save();
 
-		[Test]
-		public void All_Class_instance_BaseClass()
-		{
-			User user = new User(randomName);
-			user.id = test_id(user);
-			user.date_created = new DateTime();
-			user.date_updated = new DateTime();
-			Assert.IsInstanceOf<BaseClass>(user);
-			Item item = new Item(randomItem);
-			Assert.IsInstanceOf<BaseClass>(item);
-			Inventory inv = new Inventory(user, item, 5);
-			Assert.IsInstanceOf<BaseClass>(user);
-		}
+        int count = storage.All().Count;
+        Assert.IsTrue(count == 6);
+        
+    }
 
-		[Test]
-		public void test_quantity()
-		{
-			User user = new User(randomName);
-			Item item = new Item(randomItem);
-			Inventory inv = new Inventory(user, item, 5);
-			Assert.AreEqual(5, inv.quantity);
+    [Test]
+    public void Test_Deleting()
+    {
+        Data = storage?.All();
+        Data.Remove(newUser.id!);
 
-			Inventory inv1 = new Inventory(user, item);
-			Assert.AreEqual(1, inv1.quantity);
+        int count = storage!.All().Count;
+        Assert.IsTrue(count == 5);
+    }
 
-			Inventory inv2 = new Inventory(user, item, -6);
-			Assert.AreEqual(0, inv2.quantity);
-		}
-
-		[Test]
-		public void test_price()
-		{
-			Item item = new Item(randomItem);
-			item.price = 5.15424f;
-			Assert.AreEqual(5.15f, item.price);
-			Item item1 = new Item(randomItem);
-			item1.price = 0;
-			Assert.AreEqual(0.00, item1.price);
-			Item item2 = new Item(randomItem);
-			item2.price = 5.1f;
-			Assert.AreEqual(5.10f, item2.price);
-		}
-	}
+ 
+    
+    
 }
