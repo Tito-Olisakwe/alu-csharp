@@ -1,54 +1,28 @@
 using System;
-using System.Collections.Generic;
 
-namespace InventoryLibrary
-{
-    /// <summary>
-    /// Class representing an item in the inventory
-    /// </summary>
-    public class Item : BaseClass
+public class Item : BaseClass{
+
+    public string? name
     {
-        /// <summary>
-        /// Name of the item
-        /// </summary>
-        public string name { get; set; }
+        get;
+        set;
+    }
 
-        /// <summary>
-        /// Description of the item
-        /// </summary>
-        public string description { get; set; }
+    public string? description {
+        get ; set;
+    }
 
-        /// <summary>
-        /// Price of the item, limited to 2 decimal points
-        /// </summary>
-        private float _price;
-        public float price 
-        { 
-            get { return _price; } 
-            set { _price = (float)Math.Round(value, 2); } 
-        }
+    
+    private float Price;
+    public float price {
+        get { return (float)Math.Round(Price, 2);}
+        set { Price = value; }
+    }
 
-        /// <summary>
-        /// Tags associated with the item
-        /// </summary>
-        public List<string> tags { get; set; }
+    public List<string>? tags = new List<string>();
 
-        /// <summary>
-        /// Constructor to initialize the item
-        /// </summary>
-        public Item()
-        {
-            this.tags = new List<string>();
-        }
 
-        /// <summary>
-        /// Constructor to initialize the item with name and description
-        /// </summary>
-        public Item(string name, string description)
-        {
-            this.name = name;
-            this.description = description;
-            this.tags = new List<string>();
-        }
+    public Item(string name){
+        this.name = name;
     }
 }

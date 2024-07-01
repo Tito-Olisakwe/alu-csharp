@@ -1,79 +1,133 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
+using System.Dynamic;
+using System.Reflection;
+using System.Reflection.Metadata;
+using System.Runtime.InteropServices.JavaScript;
 using System.Text.Json;
 
-namespace InventoryLibrary
-{
-    /// <summary>
-    /// Class to handle storage of inventory data in JSON format
-    /// </summary>
-    public class JSONStorage
+public class JsonStorage {
+
+    private static void Main(String[] args)
     {
-        /// <summary>
-        /// Dictionary to hold objects with keys as ClassName.id and values as the objects
-        /// </summary>
-        public Dictionary<string, object> objects { get; set; }
+        
+    }
 
-        private readonly string filePath = "storage/inventory_manager.json";
+    private static JsonStorage? _instance;
+    private static readonly object Lock = new object();
 
-        /// <summary>
-        /// Constructor to initialize the JSONStorage
-        /// </summary>
-        public JSONStorage()
-        {
-            objects = new Dictionary<string, object>();
-            Load();
-        }
+    private JsonStorage() {}
 
-        /// <summary>
-        /// Returns the dictionary of objects
-        /// </summary>
-        /// <returns>Dictionary of objects</returns>
-        public Dictionary<string, object> All()
-        {
-            return objects;
-        }
-
-        /// <summary>
-        /// Adds a new object to the dictionary
-        /// </summary>
-        /// <param name="obj">Object to add</param>
-        public void New(object obj)
-        {
-            string key = obj.GetType().Name + "." + ((BaseClass)obj).id;
-            objects[key] = obj;
-        }
-
-        /// <summary>
-        /// Serializes the objects to JSON and saves to the file
-        /// </summary>
-        public void Save()
-        {
-            string jsonString = JsonSerializer.Serialize(objects);
-            Directory.CreateDirectory("storage");
-            File.WriteAllText(filePath, jsonString);
-        }
-
-        /// <summary>
-        /// Deserializes the JSON file to objects
-        /// </summary>
-        public void Load()
-        {
-            if (File.Exists(filePath))
-            {
-                string jsonString = File.ReadAllText(filePath);
-                objects = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonString) ?? new Dictionary<string, object>();
+    public static JsonStorage? Instance {
+        get {
+            if(_instance == null){
+                lock (Lock)
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new JsonStorage();
+                    }
+                }
             }
-        }
 
-        /// <summary>
-        /// Empties the JSON file by clearing the dictionary and saving it
-        /// </summary>
-        public void EmptyFile()
-        {
-            objects.Clear();
-            Save();
+            return _instance;
         }
     }
+
+    Dictionary<string, object> _objects = new Dictionary<string, object>();
+    readonly string _filename =  "inventory_manager.json";
+    string _path = String.Empty;
+    private string _baseDirectory = string.Empty;
+    string _newDirectoryName = "storage";
+
+   // private string temporalpath =  "C:\\Users\\Lenovo\\2023\\SE-SPECIALIZATION\\Programming C#\\alu-csharp\\csharp-text_based_interface\\storage\\inventory_manager.json";
+    
+    
+    string? _data = default(string);
+
+    public Dictionary<string, object> All(){
+        return _objects;
+    }
+
+    public void New(object value){
+        BaseClass? classObject = value as BaseClass;
+        string objId = $"{value}.{classObject?.id}";
+
+        _objects.Add(objId, value);
+    }
+
+    public void PathCreations()
+    {
+        // _baseDirectory = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        _baseDirectory = Path.GetFullPath(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)!);
+    }
+
+
+
+    /// <summary>
+    /// serialize all objects
+    /// </summary>   
+    public void Save(){
+
+       PathCreations();
+       string newDirectoryFullPath = Path.Combine(_baseDirectory, "..", "..", "..", "..", _newDirectoryName);
+
+       if(!Directory.Exists(newDirectoryFullPath)){
+          Directory.CreateDirectory(newDirectoryFullPath);
+       }
+
+       _path = Path.Combine(newDirectoryFullPath, _filename);
+       // Console.WriteLine(_path);
+    
+        var options = new JsonSerializerOptions { WriteIndented = true };
+
+      
+
+        _data = JsonSerializer.Serialize(_objects, options);
+       
+
+        File.WriteAllText(_path, _data);
+        
+        /*
+        if(File.Exists(path)){  
+            
+        } 
+        */
+
+       
+    }
+
+    public void EmptyFile()
+    {
+        if (File.Exists(_path))
+        {
+            _objects = new Dictionary<string, object>();
+            Save();
+        }
+       
+    }
+
+    /// <summary>
+    /// deserialize all objects back
+    /// </summary>
+
+    public void Load(){
+        
+        
+       // Console.WriteLine(_path);
+        if(File.Exists(_path)){
+            if (_path != null)
+            {
+               // Console.WriteLine("Path exist if this is shown");
+                string data = File.ReadAllText(_path);
+                //List<SampleData>?  dataList = JsonSerializer.Deserialize<List<SampleData>>(Data);
+                //objects = dataList.ToDictionary(data => data.classname);
+                var options = new JsonSerializerOptions{ PropertyNameCaseInsensitive = true };
+                _objects = JsonSerializer.Deserialize<Dictionary<string, object>>(data, options) ?? throw new InvalidOperationException();
+            }
+        }else{
+                Console.WriteLine("File Does Not Exist");
+        }
+    }
+
+
 }
