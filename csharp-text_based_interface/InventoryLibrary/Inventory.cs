@@ -33,11 +33,13 @@ namespace InventoryLibrary
         }
 
         /// <summary>
-        /// Constructor to initialize the inventory entry
+        /// Constructor to initialize the inventory entry with user_id and item_id
         /// </summary>
-        public Inventory()
+        public Inventory(string userId, string itemId, int quantity = 1)
         {
-            this.quantity = 1;
+            this.user_id = userId;
+            this.item_id = itemId;
+            this.quantity = quantity;
         }
     }
 }

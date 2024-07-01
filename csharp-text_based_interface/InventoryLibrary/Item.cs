@@ -40,5 +40,15 @@ namespace InventoryLibrary
         {
             this.tags = new List<string>();
         }
+
+        /// <summary>
+        /// Constructor to initialize the item with name and description
+        /// </summary>
+        public Item(string name, string description)
+        {
+            this.name = name;
+            this.description = description;
+            this.tags = new List<string>();
+        }
     }
 }

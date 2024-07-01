@@ -1,36 +1,104 @@
 using System;
+using System.Collections.Generic;
 using NUnit.Framework;
 using InventoryLibrary;
 
 namespace InventoryManagement.Tests
 {
-    [TestFixture]
-    public class InventoryTests
+    public class Tests
     {
-        [Test]
-        public void Test_Create_Item()
+        private static JSONStorage storage;
+        private User newUser;
+        private Item temp;
+        private Dictionary<string, object> Data;
+
+        [SetUp]
+        public void Setup()
         {
-            var item = new Item { name = "Laptop", price = 999.99f };
-            Assert.AreEqual("Laptop", item.name);
-            Assert.AreEqual(999.99f, item.price);
+            storage = new JSONStorage();
+
+            temp = new Item("Nwalahnjie", "Initial description");
+            temp.description = "Testing Descriptions";
+            temp.price = 10f;
+            storage.New(temp);
+            storage.New(new Item("Anye", "Initial description"));
+
+            storage.New(new User("anTe"));
+            newUser = new User("Nwalahnjie Anye")
+            {
+                date_created = DateTime.Now
+            };
+
+            storage.New(newUser);
+
+            storage.New(new Inventory(newUser.id!, temp.id!, 20));
+
+            storage.Save();
+
+            storage.Load();
+        }
+
+        [TearDown]
+        public void CleanUp()
+        {
+            storage.EmptyFile();
         }
 
         [Test]
-        public void Test_Create_User()
+        public void Test_User()
         {
-            var user = new User { name = "John Doe" };
-            Assert.AreEqual("John Doe", user.name);
+            User TestUser = new User("Test");
+
+            Assert.IsTrue(TestUser.name == "Test");
         }
 
         [Test]
-        public void Test_Create_Inventory()
+        public void Test_Item()
         {
-            var user = new User { name = "John Doe" };
-            var item = new Item { name = "Laptop", price = 999.99f };
-            var inventory = new Inventory { user_id = user.id, item_id = item.id, quantity = 5 };
-            Assert.AreEqual(user.id, inventory.user_id);
-            Assert.AreEqual(item.id, inventory.item_id);
-            Assert.AreEqual(5, inventory.quantity);
+            Item TestItem = new Item("Test", "test description");
+            TestItem.price = 10;
+            TestItem.description = "test description";
+
+            Assert.IsTrue(TestItem.name == "Test");
+            Assert.IsTrue(TestItem.price == 10);
+            Assert.IsTrue(TestItem.description == "test description");
+        }
+
+        [Test]
+        public void Test_Inventory()
+        {
+            Inventory testInventory = new Inventory(newUser.id!, temp.id!, 20);
+            Assert.IsTrue(testInventory.item_id == temp.id);
+            Assert.IsTrue(testInventory.user_id == newUser.id);
+            Assert.IsTrue(testInventory.quantity == 20);
+        }
+
+        [Test]
+        public void Test_UserAddition()
+        {
+            int count = storage.All().Count;
+            Assert.IsTrue(count == 5);
+        }
+
+        [Test]
+        public void Test_Adding()
+        {
+            User AnotherUser = new User("Test");
+            storage.New(AnotherUser);
+            storage.Save();
+
+            int count = storage.All().Count;
+            Assert.IsTrue(count == 6);
+        }
+
+        [Test]
+        public void Test_Deleting()
+        {
+            Data = storage.All();
+            Data.Remove(newUser.id!);
+
+            int count = storage.All().Count;
+            Assert.IsTrue(count == 5);
         }
     }
 }

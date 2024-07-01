@@ -6,11 +6,10 @@ namespace InventoryManager
 {
     class InventoryManager
     {
-        static JSONStorage storage;
+        static JSONStorage storage = new JSONStorage();
 
         static void Main(string[] args)
         {
-            storage = new JSONStorage();
             Console.WriteLine("Inventory Manager");
             Console.WriteLine("-------------------------");
             PrintCommands();
@@ -18,7 +17,12 @@ namespace InventoryManager
             while (true)
             {
                 Console.Write("> ");
-                string input = Console.ReadLine().Trim();
+                string? input = Console.ReadLine()?.Trim();
+                if (string.IsNullOrEmpty(input))
+                {
+                    continue;
+                }
+
                 string[] tokens = input.Split(' ');
 
                 if (tokens.Length == 0)

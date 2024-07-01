@@ -66,5 +66,14 @@ namespace InventoryLibrary
                 objects = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonString) ?? new Dictionary<string, object>();
             }
         }
+
+        /// <summary>
+        /// Empties the JSON file by clearing the dictionary and saving it
+        /// </summary>
+        public void EmptyFile()
+        {
+            objects.Clear();
+            Save();
+        }
     }
 }
