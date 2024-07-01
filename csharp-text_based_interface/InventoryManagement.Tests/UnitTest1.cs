@@ -12,15 +12,15 @@ public class Tests
     {
         storage = JsonStorage.Instance;
         
-        temp = new Item("Nwalahnjie");
+        temp = new Item("Paris");
         temp.description = "Testing Descriptions";
         temp.price = 10f;
         storage?.New(temp);
-        storage?.New(new Item("Anye"));
+        storage?.New(new Item("Tito"));
         
         
-        storage?.New(new User("anTe"));
-        newUser = new User("Nwalahnjie Anye");
+        storage?.New(new User("Ada"));
+        newUser = new User("Paris Tito");
         newUser.date_created = DateTime.Now;
         
         storage?.New(newUser);

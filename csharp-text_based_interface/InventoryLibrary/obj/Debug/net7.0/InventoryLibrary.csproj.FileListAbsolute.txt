@@ -1,0 +1,15 @@
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/bin/Debug/net7.0/InventoryLibrary
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/bin/Debug/net7.0/InventoryLibrary.deps.json
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/bin/Debug/net7.0/InventoryLibrary.runtimeconfig.json
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/bin/Debug/net7.0/InventoryLibrary.dll
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/bin/Debug/net7.0/InventoryLibrary.pdb
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/InventoryLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/InventoryLibrary.AssemblyInfoInputs.cache
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/InventoryLibrary.AssemblyInfo.cs
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/InventoryLibrary.csproj.CoreCompileInputs.cache
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/InventoryLibrary.sourcelink.json
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/InventoryLibrary.dll
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/refint/InventoryLibrary.dll
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/InventoryLibrary.pdb
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/InventoryLibrary.genruntimeconfig.cache
+/workspaces/alu-csharp/csharp-text_based_interface/InventoryLibrary/obj/Debug/net7.0/ref/InventoryLibrary.dll
