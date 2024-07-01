@@ -1,3 +1,7 @@
+using System;
+using NUnit.Framework;
+using InventoryLibrary;
+
 namespace InventoryManagement.Tests;
 
 public class Tests
