@@ -1,0 +1,12 @@
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net8.0\InventoryLibrary.deps.json
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net8.0\InventoryLibrary.dll
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\bin\Debug\net8.0\InventoryLibrary.pdb
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net8.0\InventoryLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net8.0\InventoryLibrary.AssemblyInfoInputs.cache
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net8.0\InventoryLibrary.AssemblyInfo.cs
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net8.0\InventoryLibrary.csproj.CoreCompileInputs.cache
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net8.0\InventoryLibrary.sourcelink.json
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net8.0\InventoryLibrary.dll
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net8.0\refint\InventoryLibrary.dll
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net8.0\InventoryLibrary.pdb
+C:\Users\learn\gitrepos\alu-csharp\csharp-text_based_interface\InventoryLibrary\obj\Debug\net8.0\ref\InventoryLibrary.dll
